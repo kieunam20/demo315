@@ -1,0 +1,30 @@
+<div class="container col-md8 text-center mt-3 mb-3">
+   <table class="table table-bordered">
+      <tr>
+         <th class="h1 text text-primary" colspan="6">Subject LIST</th>
+         
+      </tr>
+      <tr>
+         <th>Name Subject</th>
+         <th>Slot</th>
+         <th>Image</th>
+         <th>Actions</th>
+      </tr>
+      {{#each subjects }}
+            <tr>
+               <td>{{ full_name }}</td>
+               <td>{{ slot }}</td>
+               <td>
+                  <img src=" {{ image }}"
+                  width="250" height="250">
+                 </td>
+               <td>
+                <a class="btn btn-primary" href="/subject/add">Add</a>
+                  <a class="btn btn-warning" href="/subject/edit/{{_id}}">Edit</a>
+                  <a class="btn btn-danger" href="/subject/delete/{{_id}}"
+                  onclick="return confirm('Are you sure to delete this subject1 ?');">Delete</a>
+               </td>
+            </tr>
+      {{/each}}
+   </table>
+</div>
